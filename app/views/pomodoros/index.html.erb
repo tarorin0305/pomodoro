@@ -1,0 +1,12 @@
+<h1>ポモドーロ・テクニックタイマー</h1>
+<p><%= text_field_tag 'set_munites', '25', size: 20 %>分計測します</p>
+
+<div>
+  残り <span id='minute'>  </span>分<span id='sec'>  </span>秒
+</div>
+
+<%= button_tag "ポモドーロ スタート", { id: 'start' } %>
+<%= button_tag "リセット", { id: 'reset' } %>
+<%= button_tag "検証用", { id: 'test' } %>
+
+<%= javascript_pack_tag 'pomodoro/timer' %>
